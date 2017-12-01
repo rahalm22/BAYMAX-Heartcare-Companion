@@ -17,16 +17,16 @@
 			$user = $_GET['username'];
 			$pass = $_GET['password'];
 	}
-	$sql = "INSERT INTO baymax.doctorlogin (username, password) VALUES ('$user', '$pass')";
+	/*$sql = "INSERT INTO baymax.doctorlogin (username, password) VALUES ('$user', '$pass')";
 
 	if ($conn->query($sql) === TRUE) {
-	   // echo "<br>New record created successfully";
-		echo file_get_contents("PatientHomePage.html");
-		$conn->close();
+	   // echo "<br>New record created successfully";*/
+		echo file_get_contents("DoctorHomePage.html");
+		/*$conn->close();
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 		$conn->close();	
-	}
+	}*/
 
 
 

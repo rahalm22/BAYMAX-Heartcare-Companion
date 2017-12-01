@@ -1,12 +1,89 @@
 <html>
-	<body>
-		<h1> BAYMAX: Your HeartCare Companion </h1>
-		<h2> Doctor Login </h2> 
-		<form action="doctorlogin.php">
-  			Username: <input type="text" name="username"><br>
-  			Password: <input type="password" name="password"><br>
-  			<input type="submit" value="Submit">
-		</form>
-		<a href="DoctorSignup.html"> Sign up! </a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animate.css">
+	<style>
+	body,h2,h3,h4,h5,h6 {font-family: "Lucida Console", Monaco, monospace;}
+	h1{
+		font-family: "Lucida Console", Monaco, monospace;
+		font-size: 50px;
+	}
+body, html {
+    height: 100%;
+    color: #FFFFFF;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1{
+	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)),url('Red-Desktop-Wallpaper-04292finalfinal');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 12px;}
+.w3-wider {letter-spacing: 30px;}
+.w3-hover-opacity {cursor: pointer;}
+.w3-opacity-min{opacity: 0.5;}
+.button-width{width:300px;}
+.w3-opacity-max{opacity: 1;}
+
+	</style>
+	<body class = "bgimg-1">
+	       <!-- Navbar (sit on top) -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">x</a>
+  <div class="w3-container">
+    <h3 class="w3-wider"><font color="white"><br>BAYMAX</font><br><br></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="HomePage.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About us</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span class="w3-wide">BAYMAX</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <div class="w3-display-container fadeIn animated" id="patientlogin">
+  		<div class="w3-display-topmiddle" style="white-space: nowrap;">
+			<br><h2> Doctor Login </h2>
+			<form action="doctorlogin.php" method = "get">
+  				<input type="text" name="username" placeholder="Username"/>
+  				<input type="password" name="password" placeholder="Password"/><br>
+  				<input class="w3-btn w3-red" type="submit" value="Login">
+			</form>
+			<p> Don't have an account? Sign up now! <br></p>
+			<a class="w3-btn w3-red" href="DoctorSignup.html"> Sign up! </a>
+		</div>	
+	</div>
+
+</div>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
 	</body>	
 </html>
