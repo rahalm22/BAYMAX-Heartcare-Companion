@@ -3,13 +3,13 @@
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="animate.css">
 	<style>
-	body,h2,h3,h4,h5,h6 {font-family: "Lucida Console", Monaco, monospace;}
+	body,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 	h1{
-		font-family: "Lucida Console", Monaco, monospace;
+		font-family: "Montserrat", sans-serif;
 		font-size: 50px;
 	}
 body, html {
@@ -20,12 +20,12 @@ body, html {
 
 /* Create a Parallax Effect */
 .bgimg-1{
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
 }
-
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url('baymax-big-hero-6-49046-1920x1080');
@@ -38,16 +38,16 @@ body, html {
 .w3-opacity-min{opacity: 0.5;}
 .button-width{width:300px;}
 	</style>
-	<body>
+	<body class="bgimg-1">
 		<!--First parallax image with Logo text -->	
-	<div class="bgimg-1 w3-display-container" id="home">
+	<div class="w3-display-container" id="home">
 		<div class="w3-display-top w3-wider fadeIn animated"><h1>&nbsp&nbspBAYMAX</h1>
 			<div class = "w3-wide">
 				<h3>&nbsp&nbsp&nbsp&nbsp&nbspYour HeartCare Companion<br></h3>
 			</div>
 		</div>
-  		<div class="w3-display-middle fadeIn animated" style="white-space:nowrap;">
-  		 <span>	
+  		<div class="ww3-display-middle fadeIn animated" style="white-space:nowrap; margin-left: 500px">
+  		 <span>	<br><br><br><br>
   		 	<a href = "PatientLogin.html" class="w3-btn w3-red w3-wide button-width"> <h2>PATIENT</h2> </a><br><br><br>
   		 	<a href = "DoctorLogin.html" class="w3-btn w3-red w3-wide button-width"> <h2>DOCTOR</h2> </a>
 		</span>
