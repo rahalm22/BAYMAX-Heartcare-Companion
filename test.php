@@ -1,12 +1,12 @@
 <html>
-	<title>BAYMAX: HOMEPAGE</title>
-	<meta charset="UTF-8">
+  <title>BAYMAX: HOMEPAGE</title>
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monteserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="animate.css">
-	<style>
+  <style>
 body, html {
     font-family: "Montserrat", sans-serif;
     height: 100%;
@@ -16,7 +16,7 @@ body, html {
 
 /* Create a Parallax Effect */
 .bgimg-1{
-	background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('68815121-stethoscope-wallpapers (1)');
+  background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('68815121-stethoscope-wallpapers (1)');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,10 +29,29 @@ body, html {
 .w3-hover-opacity {cursor: pointer;}
 .w3-opacity-min{opacity: 0.5;}
 .button-width{width:500px;}
-	</style>
-	<body class="bgimg-1">
+  </style>
+  <body class="bgimg-1"> 
+<?php
+$i = 0;
+$myfile = fopen("PredictedResults.txt", "r") or die("Unable to open file!");
+// Output one line until end-of-file
+while(!feof($myfile)) {  
+  $i++; 
+  if ($i == 1) $one = fgets($myfile);
+  else if ($i == 2) $two = fgets($myfile);
+  else if ($i == 3) $three = fgets($myfile);
+  else if ($i == 4) $four = fgets($myfile);
+  else if ($i == 5) $five = fgets($myfile);
+  else if ($i == 6) $six = fgets($myfile);
+  else if ($i == 7) $seven = fgets($myfile);
+  else fgets($myfile);
+}
 
-			<!-- Navbar (sit on top) -->
+echo $seven;
+fclose($myfile);
+?>
+
+<!-- Navbar (sit on top) -->
 <nav class="w3-sidebar w3-red w3-collapse w3-animate-left w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:32px">x</a>
   <div class="w3-container">
@@ -53,14 +72,45 @@ body, html {
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-	
-		<!--First parallax image with Logo text -->	
-  		<div class="fadeIn animated" style="white-space:nowrap; margin-left: 400px; margin-top: 100px">
-  			<h2> Patient Data have been recorded! Thank You </h2><br><br>
-  		 	<a href = "DoctorHomePage.html" class="w3-btn w3-red w3-wide button-width" style="margin-left: 50px"> <h2>ENTER ANOTHER</h2>
-  		 	</a>	
-		</div>
-		
+
+  
+    <!--First parallax image with Logo text --> 
+      <div class="fadeIn animated" style="white-space:nowrap; margin-left: 400px; margin-top: 100px">
+        <h2> Here is the graph </h2><br><br>
+
+          <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+      
+          <p >Cardio Vascular Disease</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $one ?>"><?php echo $one ?>%</div>
+          </div>
+          <p >Congestive Heart Failure</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $two ?>"><?php echo $two ?>%</div>
+          </div>
+          <p >Coronary Heart Disease</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $three ?>"><?php echo $three ?>%</div>
+          </div>
+          <p >Hard Coronary Heart Disease</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $four ?>"><?php echo $four ?>%</div>
+          </div>
+          <p >Intermittent Claudication</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $five ?>"><?php echo $five ?>%</div>
+          </div>
+          <p >Stroke</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $six ?>"><?php echo $six ?>%</div>
+          </div>
+          <p >Artial Fibrillation</p>
+          <div class="w3-grey">
+            <div class="w3-container w3-padding-small w3-red w3-center" style="width:<?php echo $seven ?>"><?php echo $seven ?>%</div>
+          </div>
+          <br><br>
+      </div>
+    
 <!-- Contact Modal -->
 <div id="contact" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
@@ -90,6 +140,6 @@ body, html {
       <p>COMING SOON</p>
     </div>
   </div>
-</div>		
-	</body>	
+</div>    
+  </body> 
 </html>

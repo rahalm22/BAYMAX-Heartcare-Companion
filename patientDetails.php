@@ -42,7 +42,7 @@
 	$AF=$_GET['AF'];
 	$IC=$_GET['IC'];
 	
-			$sql = "INSERT INTO baymax.patientdetails (patientusername, age, gender, height, weight, heartrate, sbd, dbd, totcholestrol, triglyceride, ldl, hdl, fastingglucose, diabetes, parentdiabetes, smoking, alcohol, printervals, hypertensivemedication, cardiomegaly, valve, significantmurmur, leftventicularhypertrophy, stroke, hardcoronaryheart, coronaryheart, conjestiveheartfailure, cardiovascular, artialfibrillation, intermittentclaudication) VALUES ('$username', '$age','$gender','$height','$weight','$HR','$SBP','$DBP','$totChol','$triglyceride','$ldl','$hdl','$fgl','$CD','$PD','$smoking','$alcohol','$PRIntervals','$HM','$cardiomegaly','$VD','$SM','$LVH','$stroke','$HCHD','$CHD','$CHF','$cardiovascdisease','$AF','$IC')";	
+			$sql = "INSERT INTO baymax.patientdetails (patientusername, age, gender, height, weight, heartrate, sbp, dbp, totcholestrol, triglyceride, ldl, hdl, fastingglucose, diabetes, parentdiabetes, smoking, alcohol, printervals, hypertensivemedication, cardiomegaly, valve, significantmurmur, lvh, stroke, hardcoronaryheart, coronaryheart, conjestiveheartfailure, cardiovascular, artialfibrillation, intermittentclaudication) VALUES ('$username', '$age','$gender','$height','$weight','$HR','$SBP','$DBP','$totChol','$triglyceride','$ldl','$hdl','$fgl','$CD','$PD','$smoking','$alcohol','$PRIntervals','$HM','$cardiomegaly','$VD','$SM','$LVH','$stroke','$HCHD','$CHD','$CHF','$cardiovascdisease','$AF','$IC')";	
 
 	
 
