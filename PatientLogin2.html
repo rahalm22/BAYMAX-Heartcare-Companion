@@ -20,6 +20,43 @@ body, html {
     letter-spacing: 2px;
 }
 
+::placeholder {
+    color: #ff0000;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ff0000;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #ff0000;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #ffb3b3; /* Red */
+    color: #ff3333;
+    margin-bottom: 30px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
 /* Create a Parallax Effect */
 .bgimg-1{
   background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)),url('Red-Desktop-Wallpaper-04292finalfinal');
@@ -77,6 +114,10 @@ body, html {
       <form action="patientlogin.php" method = "post">
           <input type="text" name="username" placeholder="Username"/>
           <input type="password" name="password" placeholder="Password"/><br>
+          <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            Invalid!!
+          </div>
           <input class="w3-btn w3-red" type="submit" value="Login">
       </form>
       <p style="letter-spacing: 1px"> Don't have an account? Sign up now! <br></p>
