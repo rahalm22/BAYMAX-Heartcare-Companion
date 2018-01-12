@@ -147,6 +147,7 @@ input[type=number]{
     <a href="Patient_History.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">My History</a><br>
     <a href = #about onclick="document.getElementById('about').style.display='block'" class="w3-bar-item w3-button w3-hover-white">About us</a>  
     <a href = #contact onclick="document.getElementById('contact').style.display='block'" class="w3-bar-item w3-button w3-hover-white">Contact</a> 
+    <a href="PatientLogin.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sign Out</a>
   </div>
 </nav>
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
@@ -159,7 +160,7 @@ input[type=number]{
 		<div class="w3-display-container fadeIn animated" id="patientdetailsdoctor">
 		<div class="w3-display-topmiddle inner contact">
 			
-		<h1 class="w3-wide"><br><b>Your Details</b></h1><br>
+		<h1 class="w3-wide"><br><b>Welcome <?php echo $login_session; ?>! Please Enter Your Details</b></h1><br>
     <hr class="w3-border-grey" style="margin:auto;width:100%">
 		<form class = "animated fadeIn" action="patientPredict.php" method="get">
 			<div class="half left cf">
